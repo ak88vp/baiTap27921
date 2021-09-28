@@ -43,26 +43,37 @@
             document.write(this.name + ' : ' + this.soud+'<br>')
         }
 
-        mouse() {
+        mouse(rat) {
             if (this.speedMax > rat.speed) {
                 document.write('mèo đã bắt đc chuột <br>')
-            } else document.write('chạy k kịp ;ăn cái gì')
+
+            } else{
+                document.write('chạy k kịp ;ăn cái gì')
+
+            }
+
         }
 
-        eating() {
+        eating(rat) {
             if (rat.live = true) {
                 this.weight += rat.weight
                 document.write('mèo đã chén xong em này <br> mèo ' + this.weight + 'cân')
             }else document.write('chịu chả ăn nổi')
         }
+        display(rat){
+            this.mouse(rat)
+            this.eating(rat)
+            this.mouse()
+            this.eating()
+        }
     }
 
-    let at = new Rat('chó', 10, true)
-    let rat=at
+    let jerry = new Rat('jerry', 10, true)
+    let bigMon = new Rat('chị đại', 100000000000, )
     let tom=new Cat('tom');
+   tom.display(jerry)
     tom.sounding('bịp')
-    tom.mouse()
-    tom.eating()
+
 </script>
 </body>
 </html>
