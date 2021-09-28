@@ -47,18 +47,24 @@
             if (this.speedMax > rat.speed) {
                 document.write('mèo đã bắt đc chuột <br>')
 
+
             } else{
-                document.write('chạy k kịp ;ăn cái gì')
+                document.write('chạy không kịp , ăn cái gì ? <br>')
+
 
             }
 
         }
 
         eating(rat) {
-            if (rat.live = true) {
-                this.weight += rat.weight
-                document.write('mèo đã chén xong em này <br> mèo ' + this.weight + 'cân')
-            }else document.write('chịu chả ăn nổi')
+
+
+                if (rat.live = true) {
+                    this.weight += rat.weight
+                    document.write('mèo đã chén xong em này <br> mèo ' + this.weight + 'cân')
+                }else document.write('chịu chả ăn nổi')
+
+
         }
         display(rat){
             this.mouse(rat)
@@ -68,10 +74,10 @@
         }
     }
 
-    let jerry = new Rat('jerry', 10, true)
+    let jerry = new Rat('jerry', 10, false)
     let bigMon = new Rat('chị đại', 100000000000, )
     let tom=new Cat('tom');
-   tom.display(jerry)
+    tom.display(jerry)
     tom.sounding('bịp')
 
 </script>
